@@ -1,0 +1,121 @@
+.design-manager {
+  margin-bottom: 100px;
+}
+
+.product-manager {
+  margin-bottom: 105px;
+}
+
+.marketers {
+  margin-bottom: 146px;
+
+  @include breakpoint("sm") {
+    margin-bottom: 50px;
+  }
+}
+
+.professional__image-holder {
+  width: 50%;
+
+  @include breakpoint("md") {
+    width: 60%;
+    margin: 0 auto;
+    order: 2;
+  }
+
+  &_pm {
+    width: 50%;
+    @include breakpoint("md") {
+      width: 60%;
+      margin: 0 auto;
+      order: 2;
+    }
+  }
+}
+
+.professional {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+
+  &__text-holder {
+    width: 45%;
+
+    @include breakpoint("md") {
+      width: 100%;
+    }
+
+    &__pre-title {
+      font-size: $btn-font-size;
+      line-height: $btn-line-height;
+      margin-bottom: 3px;
+    }
+    &__title {
+      font-size: 36px;
+      line-height: $title-text-line-height;
+      margin: 0;
+      margin-bottom: 22px;
+      color: $black;
+
+      & h1 {
+        @include breakpoint("md") {
+          font-size: 30px;
+          margin: 0;
+          margin-bottom: 10px;
+        }
+
+        @include breakpoint("sm") {
+          font-size: 30px;
+          margin: 0;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    &__text {
+      margin-bottom: 30px;
+    }
+    &__title-small {
+      margin-bottom: 12px;
+      color: $black;
+    }
+    &__text-small {
+      margin-bottom: 25px;
+    }
+
+    &__list {
+      list-style: none;
+      padding: 0;
+
+      &-item {
+        margin-bottom: 30px;
+        position: relative;
+        padding-left: 65px;
+
+        &:before {
+          position: absolute;
+          content: "";
+          width: 35px;
+          height: 35px;
+          left: 0;
+          top: 7px;
+          background-color: $orange;
+          border-radius: 14px;
+        }
+        &:after {
+          position: absolute;
+          //   content: "\2714";
+          content: "";
+          color: $white;
+          left: 9px;
+          top: 16px;
+          border-bottom: 3px solid $white;
+          border-left: 3px solid $white;
+          width: 18px;
+          height: 10px;
+          transform: rotateZ(-45deg);
+        }
+      }
+    }
+  }
+}

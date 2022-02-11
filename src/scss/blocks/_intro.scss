@@ -1,0 +1,115 @@
+.intro {
+  .container {
+    padding-top: 130px;
+
+    @include breakpoint("sm") {
+      padding-top: 150px;
+      margin-bottom: 100px;
+    }
+  }
+}
+
+.intro-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 110px;
+  justify-content: space-between;
+
+  @include breakpoint("lg") {
+    margin-bottom: 100px;
+  }
+
+  @include breakpoint("sm") {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+.intro-left {
+  width: 45%;
+
+  @include breakpoint("lg") {
+    width: 40%;
+    padding-left: 10px;
+  }
+
+  @include breakpoint("sm") {
+    width: 100%;
+    padding-left: 10px;
+  }
+
+  &__title {
+    font-size: $title-text-font-size;
+    line-height: $title-text-line-height;
+    font-weight: 700;
+    color: $black;
+
+    @include breakpoint("lg") {
+      font-size: 24px;
+      line-height: 1.75em;
+    }
+
+    @include breakpoint("sm") {
+      font-size: 20px;
+      line-height: 1.75em;
+    }
+  }
+
+  &__text {
+    font-size: $general-text-font-size;
+    line-height: $general-text-line-height;
+    padding-right: 60px;
+    width: 100%;
+
+    @include breakpoint("lg") {
+      padding-right: 0;
+    }
+
+    @include breakpoint("sm") {
+      font-size: 16px;
+      padding-right: 0;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+    list-style: none;
+
+    @include breakpoint("sm") {
+      justify-content: center;
+    }
+
+    .btn {
+      margin-right: 30px;
+    }
+  }
+
+  &__link {
+    color: $orange;
+  }
+
+  &__buttons img {
+    margin-right: 9px;
+    display: inline;
+  }
+}
+
+.intro-right {
+  width: 55%;
+
+  &__image {
+    @include breakpoint("lg") {
+      max-width: 70%;
+    }
+  }
+  &__image {
+    @include breakpoint("sm") {
+      max-width: 100%;
+    }
+  }
+}
